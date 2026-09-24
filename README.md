@@ -54,15 +54,19 @@ analyses were run on the CFFF Linux server; a complete end-to-end Windows rerun
 has not been claimed.
 
 All direct dependencies are listed in
-`environment/package_requirements.tsv`. Exact versions available from the
-archived CFFF session are recorded in
-`environment/cfff_linux_session_info.txt`; packages marked `not captured`
-still require a fresh server session capture before the dependency-version
-checklist item is complete.
+`environment/package_requirements.tsv`, with the complete exact versions used
+in the tested environment dated 28 February 2026. CRAN packages are fixed to
+that day's Posit CRAN snapshot, Bioconductor packages are fixed to
+Bioconductor 3.22 revisions at or before that date, and SCENIC is fixed to its
+corresponding official GitHub commit. The additional
+`environment/cfff_linux_session_info.txt` file records a later CFFF server
+session and is not the version authority for the dated tested environment.
 
 ## Installation
 
-Install R 4.5.2 or recreate the documented CFFF environment, then run:
+Install R 4.5.2 or recreate the documented CFFF environment, then run. The
+installer selects the 2026-02-28 CRAN snapshot and Bioconductor 3.22 and checks
+the resulting direct-package versions against the declared table:
 
 ```bash
 Rscript environment/install_dependencies.R

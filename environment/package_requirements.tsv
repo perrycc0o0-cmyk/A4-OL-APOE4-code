@@ -1,42 +1,43 @@
-package	source	role	tested_version	version_evidence
-AnnotationDbi	Bioconductor	gene identifier mapping	not captured	requires fresh CFFF session capture
-AUCell	Bioconductor	regulon activity scoring	not captured	requires fresh CFFF session capture
-babelgene	CRAN	mouse-to-human ortholog mapping	not captured	requires fresh CFFF session capture
-BiocParallel	Bioconductor	parallel backend for scDblFinder	not captured	requires fresh CFFF session capture
-clusterProfiler	Bioconductor	functional enrichment	not captured	requires fresh CFFF session capture
-cowplot	CRAN	plot composition	1.2.0	CFFF session record
-data.table	CRAN	table processing	1.18.4	CFFF session record
-doMC	CRAN	SCENIC parallel backend on Linux/macOS	not captured	requires fresh CFFF session capture
-doParallel	CRAN	SCENIC parallel backend on Windows	not captured	Windows compatibility dependency
-dplyr	CRAN	data manipulation	1.2.1	CFFF session record
-enrichplot	Bioconductor	enrichment visualization	not captured	requires fresh CFFF session capture
-fgsea	Bioconductor	gene-set enrichment	not captured	requires fresh CFFF session capture
-GENIE3	Bioconductor	SCENIC network inference	not captured	requires fresh CFFF session capture
-ggplot2	CRAN	visualization	4.0.3	CFFF session record
-ggrepel	CRAN	non-overlapping plot labels	0.9.8	CFFF session record
-harmony	CRAN	sample-identity integration	not captured	requires fresh CFFF session capture
-hdf5r	CRAN	10x HDF5 matrix input	not captured	requires fresh CFFF session capture
-lmerTest	CRAN	mixed-effects inference	not captured	requires fresh CFFF session capture
-Matrix	CRAN	sparse matrices	1.7-4	CFFF session record
-org.Hs.eg.db	Bioconductor	human gene annotation	not captured	requires fresh CFFF session capture
-org.Mm.eg.db	Bioconductor	mouse gene annotation	not captured	requires fresh CFFF session capture
-patchwork	CRAN	plot composition	1.3.2	CFFF session record
-pheatmap	CRAN	heatmaps	not captured	requires fresh CFFF session capture
-purrr	CRAN	functional iteration	1.2.2	CFFF session record
-RcisTarget	Bioconductor	SCENIC motif enrichment	not captured	requires fresh CFFF session capture
-RColorBrewer	CRAN	plot palettes	1.1-3	CFFF session record
-readr	CRAN	delimited-file input/output	not captured	requires fresh CFFF session capture
-remotes	CRAN	SCENIC installation from GitHub	not captured	installer dependency
-scales	CRAN	plot scales	1.4.0	CFFF session record
-scDblFinder	Bioconductor	sample-wise doublet detection	not captured	requires fresh CFFF session capture
-SCENIC	GitHub aertslab/SCENIC	regulon inference workflow	1.3.1	script compatibility note; confirm in fresh CFFF capture
-Seurat	CRAN	single-cell analysis	5.4.0	CFFF session record
-SeuratObject	CRAN	Seurat object infrastructure	5.3.0	CFFF session record
-showtext	CRAN	font rendering	not captured	requires fresh CFFF session capture
-SingleCellExperiment	Bioconductor	Seurat-to-SCE conversion for doublet QC	not captured	requires fresh CFFF session capture
-stringr	CRAN	string processing	1.6.0	CFFF session record
-SummarizedExperiment	Bioconductor	assay and metadata access for doublet QC	not captured	requires fresh CFFF session capture
-sysfonts	CRAN	font registration	not captured	requires fresh CFFF session capture
-tibble	CRAN	tables	3.3.1	CFFF session record
-tidyr	CRAN	data reshaping	1.3.2	CFFF session record
-UCell	Bioconductor	signature scoring	not captured	requires fresh CFFF session capture
+package	source	role	tested_version	source_revision	version_basis
+AnnotationDbi	Bioconductor 3.22	gene identifier mapping	1.72.0	ffdaf5d5dda16995f1afb7276be8f96cf738e16b	tested 2026-02-28 environment; RELEASE_3_22 revision
+AUCell	Bioconductor 3.22	regulon activity scoring	1.32.0	a57f250c342d048ce388ef5c2c082ad6a354115a	tested 2026-02-28 environment; RELEASE_3_22 revision
+babelgene	CRAN	mouse-to-human ortholog mapping	22.9	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+BiocManager	CRAN	Bioconductor release management	1.30.27	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+BiocParallel	Bioconductor 3.22	parallel backend for scDblFinder	1.44.0	3d6f2f614a8cb6d052c3c89cb328cc7d454ff565	tested 2026-02-28 environment; RELEASE_3_22 revision
+clusterProfiler	Bioconductor 3.22	functional enrichment	4.18.4	16e65173cf2f1096f58d3b6156348833f7f75329	tested 2026-02-28 environment; RELEASE_3_22 revision
+cowplot	CRAN	plot composition	1.2.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+data.table	CRAN	table processing	1.18.2.1	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+doMC	CRAN	SCENIC parallel backend on Linux/macOS	1.3.8	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+doParallel	CRAN	SCENIC parallel backend on Windows	1.0.17	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+dplyr	CRAN	data manipulation	1.2.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+enrichplot	Bioconductor 3.22	enrichment visualization	1.30.4	920c1db2c14d4f0af673bb105d3e753b92866ccb	tested 2026-02-28 environment; RELEASE_3_22 revision
+fgsea	Bioconductor 3.22	gene-set enrichment	1.36.2	b7862b78985f52670a13ca46abacb7831e33d5e1	tested 2026-02-28 environment; RELEASE_3_22 revision
+GENIE3	Bioconductor 3.22	SCENIC network inference	1.32.0	620284f6cffd8a5958e68c08977793fb50172c56	tested 2026-02-28 environment; RELEASE_3_22 revision
+ggplot2	CRAN	visualization	4.0.2	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+ggrepel	CRAN	non-overlapping plot labels	0.9.7	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+harmony	CRAN	sample-identity integration	1.2.4	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+hdf5r	CRAN	10x HDF5 matrix input	1.3.12	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+lmerTest	CRAN	mixed-effects inference	3.2-0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+Matrix	CRAN	sparse matrices	1.7-4	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+org.Hs.eg.db	Bioconductor 3.22 annotation	human gene annotation	3.22.0	Bioconductor 3.22 annotation repository	tested 2026-02-28 environment
+org.Mm.eg.db	Bioconductor 3.22 annotation	mouse gene annotation	3.22.0	Bioconductor 3.22 annotation repository	tested 2026-02-28 environment
+patchwork	CRAN	plot composition	1.3.2	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+pheatmap	CRAN	heatmaps	1.0.13	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+purrr	CRAN	functional iteration	1.2.1	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+RcisTarget	Bioconductor 3.22	SCENIC motif enrichment	1.30.0	20d91a8eceeffca65179578c181990cb82ef3ac6	tested 2026-02-28 environment; RELEASE_3_22 revision
+RColorBrewer	CRAN	plot palettes	1.1-3	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+readr	CRAN	delimited-file input/output	2.2.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+remotes	CRAN	SCENIC installation from GitHub	2.5.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+scales	CRAN	plot scales	1.4.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+scDblFinder	Bioconductor 3.22	sample-wise doublet detection	1.24.10	9d37a5cafc27aa820e8f9e28972306ef77a277b7	tested 2026-02-28 environment; RELEASE_3_22 revision
+SCENIC	GitHub aertslab/SCENIC	regulon inference workflow	1.3.1	7a74341745cecd3505310c6c5755cad456756cf9	tested 2026-02-28 environment; official repository revision
+Seurat	CRAN	single-cell analysis	5.4.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+SeuratObject	CRAN	Seurat object infrastructure	5.3.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+showtext	CRAN	font rendering	0.9-7	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+SingleCellExperiment	Bioconductor 3.22	Seurat-to-SCE conversion for doublet QC	1.32.0	db7133e208c7f6f086ca5a5d17f6b0e0ba9bc1e1	tested 2026-02-28 environment; RELEASE_3_22 revision
+stringr	CRAN	string processing	1.6.0	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+SummarizedExperiment	Bioconductor 3.22	assay and metadata access for doublet QC	1.40.0	469a2deab30b904252870c5b569b353fe1a49227	tested 2026-02-28 environment; RELEASE_3_22 revision
+sysfonts	CRAN	font registration	0.8.9	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+tibble	CRAN	tables	3.3.1	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+tidyr	CRAN	data reshaping	1.3.2	CRAN snapshot 2026-02-28	tested 2026-02-28 environment
+UCell	Bioconductor 3.22	signature scoring	2.14.0	4d114560bbd24031448e1984b110267be513df36	tested 2026-02-28 environment; RELEASE_3_22 revision

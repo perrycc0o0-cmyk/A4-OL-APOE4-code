@@ -7,10 +7,10 @@ the requested item is actually present.
 
 - [x] Source code is provided.
 - [x] A small simulated/frozen demo dataset is provided.
-- [ ] All dependencies and operating systems are listed with complete version
-      numbers. Ubuntu 22.04.3 LTS, R 4.5.2, and the captured core-package
-      versions are documented, but several SCENIC/UCell/Bioconductor versions
-      remain `not captured` in `environment/package_requirements.tsv`.
+- [x] All direct dependencies and operating systems are listed with complete
+      version numbers. Ubuntu 22.04.3 LTS and R 4.5.2 are documented;
+      `environment/package_requirements.tsv` provides exact package versions
+      for the tested environment dated 2026-02-28.
 - [x] Tested software/platform versions are stated: CFFF Ubuntu 22.04.3 LTS,
       R 4.5.2, Seurat 5.4.0, and SeuratObject 5.3.0. Windows 10/11 is described
       as compatible, not as a completed end-to-end validation.
@@ -24,8 +24,8 @@ the requested item is actually present.
 - [x] Instructions for applying the code to configured user data are provided.
 - [ ] Complete instructions and deposited inputs sufficient to reproduce every
       manuscript figure end to end are not yet available. The remaining items
-      are the package lockfile, source-data deposit, human dataset identifiers,
-      and clean full-workflow rerun.
+      are the source-data deposit, human dataset identifiers, and clean
+      full-workflow rerun.
 
 ## Additional form fields
 

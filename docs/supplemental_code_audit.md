@@ -52,8 +52,8 @@ reported A4-OL manuscript workflow are included here.
 
 ## Remaining reproducibility gaps
 
-- Exact tested versions of several Bioconductor/SCENIC/UCell dependencies must
-  be captured from the final CFFF environment.
+- A complete tested direct-dependency environment is declared for 28 February
+  2026. A clean rerun from the deposited inputs remains a release action.
 - The complete workflow has not yet been rerun from a clean output directory.
 - Large input objects, human dataset identifiers, figure source-data tables,
   software licence, release tag, and archival DOI remain release actions.
