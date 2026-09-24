@@ -1,0 +1,43 @@
+# Local configuration and credentials
+config/paths.R
+.Renviron
+.Rprofile
+
+# R and IDE state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.vscode/
+
+# Large or derived analysis objects
+*.rds
+*.RData
+*.h5
+*.h5ad
+*.loom
+*.feather
+*.parquet
+*.mtx
+*.mtx.gz
+
+# Generated figures and tables
+results/
+outputs/
+figures/
+plots/
+tables/
+*.png
+*.pdf
+*.svg
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+

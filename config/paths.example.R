@@ -1,0 +1,30 @@
+# Copy this file to config/paths.R and edit the values for your server.
+# config/paths.R is ignored by Git so private server locations are not shared.
+
+A4OL_SERVER_ROOT <- Sys.getenv(
+  "A4OL_SERVER_ROOT",
+  unset = "/path/to/server/user/root"
+)
+
+A4OL_PROJECT_ROOT <- Sys.getenv(
+  "A4OL_PROJECT_ROOT",
+  unset = file.path(A4OL_SERVER_ROOT, "scRNAseq", "qin-snRNAseq")
+)
+
+A4OL_RESULTS_ROOT <- Sys.getenv(
+  "A4OL_RESULTS_ROOT",
+  unset = file.path(A4OL_PROJECT_ROOT, "result-qin")
+)
+
+A4OL_FIGURE_ROOT <- Sys.getenv(
+  "A4OL_FIGURE_ROOT",
+  unset = file.path(A4OL_RESULTS_ROOT, "Figure")
+)
+
+A4OL_CISTARGET_ROOT <- Sys.getenv(
+  "A4OL_CISTARGET_ROOT",
+  unset = file.path(A4OL_SERVER_ROOT, "database", "cisTarget")
+)
+
+# Set this to the font file used for the submitted figures.
+A4OL_FONT_FILE <- Sys.getenv("A4OL_FONT_FILE", unset = "")

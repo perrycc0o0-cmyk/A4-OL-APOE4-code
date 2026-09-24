@@ -1,0 +1,35 @@
+package	source	role
+AnnotationDbi	Bioconductor	gene identifier mapping
+AUCell	Bioconductor	regulon activity scoring
+babelgene	CRAN	mouse-to-human ortholog mapping
+clusterProfiler	Bioconductor	functional enrichment
+cowplot	CRAN	plot composition
+data.table	CRAN	table processing
+doMC	CRAN	multicore backend for SCENIC on Linux
+dplyr	CRAN	data manipulation
+enrichplot	Bioconductor	enrichment visualization
+fgsea	Bioconductor	gene-set enrichment
+GENIE3	Bioconductor	SCENIC network inference
+ggplot2	CRAN	visualization
+ggrepel	CRAN	non-overlapping plot labels
+harmony	CRAN	sample-aware integration
+Matrix	CRAN	sparse matrices
+org.Hs.eg.db	Bioconductor	human gene annotation
+org.Mm.eg.db	Bioconductor	mouse gene annotation
+patchwork	CRAN	plot composition
+pheatmap	CRAN	heatmaps
+purrr	CRAN	functional iteration
+RColorBrewer	CRAN	color palettes
+RcisTarget	Bioconductor	SCENIC motif enrichment
+readr	CRAN	delimited-file input/output
+scales	CRAN	plot scales
+scDblFinder	Bioconductor	sample-wise doublet detection in the upstream QC workflow
+SCENIC	Bioconductor	regulon inference workflow
+Seurat	CRAN	single-cell analysis
+SeuratObject	CRAN	Seurat object infrastructure
+showtext	CRAN	font rendering
+stringr	CRAN	string processing
+sysfonts	CRAN	font registration
+tibble	CRAN	tables
+tidyr	CRAN	data reshaping
+UCell	Bioconductor	signature scoring
