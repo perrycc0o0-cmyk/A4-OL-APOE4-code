@@ -29,8 +29,8 @@ the requested item is actually present.
 
 ## Additional form fields
 
-- Software licence: **pending author/institutional approval**. Do not select a
-  licence without approval.
+- Software licence: **MIT License**. The approved licence text is provided in
+  the repository-level `LICENSE` file.
 - Code repository:
   https://github.com/perrycc0o0-cmyk/A4-OL-APOE4-code
 - Functionality described: select **Elsewhere** and enter

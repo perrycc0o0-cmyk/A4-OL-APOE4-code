@@ -17,8 +17,7 @@
 - [ ] Add figure-level machine-readable source data.
 - [ ] Add raw/processed sequencing accession numbers and reviewer-access links.
 - [ ] Confirm that no private human metadata or server credentials are tracked.
-- [ ] Select a software license with the authors/institution (for example MIT or
-      BSD-3-Clause) and add the approved `LICENSE` file.
+- [x] Add the author-approved MIT `LICENSE` file.
 - [ ] Add a valid `CITATION.cff` with the final title, authors, ORCIDs, version,
       repository URL, and release DOI.
 - [ ] Create a versioned GitHub release and archive that release in Zenodo or an

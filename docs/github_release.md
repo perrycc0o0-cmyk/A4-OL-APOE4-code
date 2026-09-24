@@ -17,7 +17,7 @@ Before making the repository public:
 
 1. complete `docs/release_checklist.md`;
 2. confirm the repository contains no private human metadata or reviewer tokens;
-3. select and add the approved software license;
+3. retain the approved MIT `LICENSE` file;
 4. add the final `CITATION.cff`;
 5. tag the exact manuscript version, for example `v1.0.0`;
 6. create a GitHub release from the tag; and

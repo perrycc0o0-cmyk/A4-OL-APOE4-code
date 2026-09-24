@@ -186,12 +186,12 @@ The source code, installation instructions, tested Linux/R versions, hardware
 description, small demo, expected demo output, demo runtime, and instructions
 for applying the code to configured data are present. A complete package
 lockfile, end-to-end clean rerun, public figure source data, final human dataset
-identifiers, software license, citation metadata, versioned release, and archive
-DOI are still outstanding. See `docs/software_submission_checklist.md` and
+identifiers, citation metadata, versioned release, and archive DOI are still
+outstanding. See `docs/software_submission_checklist.md` and
 `docs/release_checklist.md`.
 
 ## License and citation
 
-A software license and final `CITATION.cff` require author/institutional
-approval and have not been invented. Until a license is added, GitHub users can
-inspect the code but do not automatically receive reuse rights.
+The code is released under the MIT License; see `LICENSE`. A final
+`CITATION.cff` will be added after the manuscript title, author list, ORCIDs,
+version, and archival DOI are finalized.

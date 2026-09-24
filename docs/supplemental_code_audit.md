@@ -56,4 +56,4 @@ reported A4-OL manuscript workflow are included here.
   2026. A clean rerun from the deposited inputs remains a release action.
 - The complete workflow has not yet been rerun from a clean output directory.
 - Large input objects, human dataset identifiers, figure source-data tables,
-  software licence, release tag, and archival DOI remain release actions.
+  release tag, and archival DOI remain release actions.
