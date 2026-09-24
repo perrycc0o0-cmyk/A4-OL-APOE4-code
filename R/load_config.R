@@ -41,3 +41,17 @@ if (!nzchar(A4OL_SERVER_ROOT)) {
   stop("A4OL_SERVER_ROOT is empty. Edit config/paths.R before running analyses.")
 }
 
+# Optional variables used by the raw-data/QC scripts. They are defined here as
+# portable fallbacks so older private configuration files continue to work.
+if (!exists("A4OL_MOUSE_RAW_ROOT", inherits = TRUE)) {
+  A4OL_MOUSE_RAW_ROOT <- file.path(A4OL_PROJECT_ROOT, "data", "20251211")
+}
+if (!exists("A4OL_MOUSE_QC_ROOT", inherits = TRUE)) {
+  A4OL_MOUSE_QC_ROOT <- file.path(A4OL_RESULTS_ROOT, "raw_data_and_qc")
+}
+if (!exists("A4OL_N_CORES", inherits = TRUE)) {
+  A4OL_N_CORES <- suppressWarnings(
+    as.integer(Sys.getenv("A4OL_N_CORES", unset = "8"))
+  )
+}
+if (is.na(A4OL_N_CORES) || A4OL_N_CORES < 1L) A4OL_N_CORES <- 1L

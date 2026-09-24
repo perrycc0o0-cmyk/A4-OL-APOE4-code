@@ -1,0 +1,34 @@
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+LAPACK: /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3; LAPACK version 3.10.0
+
+locale:
+[1] C
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats graphics grDevices utils datasets methods base
+
+other attached packages:
+[1] broom_1.0.13 ggplot2_4.0.3 stringr_1.6.0 tibble_3.3.1
+[5] tidyr_1.3.2 dplyr_1.2.1 Seurat_5.4.0 SeuratObject_5.3.0
+[9] sp_2.2-0
+
+selected loaded namespaces used by this repository:
+Matrix_1.7-4
+RColorBrewer_1.1-3
+cowplot_1.2.0
+data.table_1.18.4
+future_1.70.0
+future.apply_1.20.2
+ggrepel_0.9.8
+gridExtra_2.3
+patchwork_1.3.2
+purrr_1.2.2
+scales_1.4.0

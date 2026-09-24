@@ -6,10 +6,17 @@ using a central path configuration.
 
 ## 0. Raw data and quality control
 
-Status: **incomplete in the local archive**. Recover the raw import, threshold
-QC, and sample-wise scDblFinder scripts from the server. Do not claim an
-end-to-end raw-data workflow until these scripts and their exact outputs are
-present.
+```bash
+Rscript scripts/00_raw_data_and_qc/01_build_mouse_seurat_from_10x.R
+Rscript scripts/00_raw_data_and_qc/02_samplewise_scdblfinder.R
+```
+
+The first script reads each Cell Ranger
+`filtered_feature_bc_matrix.h5`, applies the archived feature/count,
+mitochondrial, and complexity filters, and writes `seurat_final.rds`.
+Harmony is grouped by sample identity only. The second script runs
+scDblFinder separately by sample and writes the 108,166-cell singlet-only
+`seurat_clustered.rds` used by the annotation stage.
 
 ## 1. Mouse major-cell-type annotation
 

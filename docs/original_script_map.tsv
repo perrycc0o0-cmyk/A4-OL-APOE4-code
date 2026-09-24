@@ -1,4 +1,6 @@
 public_script	archived_working_script	status
+scripts/00_raw_data_and_qc/01_build_mouse_seurat_from_10x.R	analysis-refine/process_harmony.R	curated; hard-coded paths removed; Harmony grouped by sample identity
+scripts/00_raw_data_and_qc/02_samplewise_scdblfinder.R	Afigureoutput+/QC_MOUSE_seurat_final_scDblFinder_BY_SAMPLE_FIXED.R	curated; sample-wise doublet detection
 scripts/01_mouse_annotation/01_annotate_major_cell_types.R	annotation_final.R	curated
 scripts/02_mouse_oligodendrocytes/01_subcluster_and_annotate_mouse_ol.R	olig_annotation-c.R	curated
 scripts/02_mouse_oligodendrocytes/02_subtype_markers_and_enrichment.R	ALL4_OLIG_SUBCLUSTERS_DEG_GO_KEGG_TOP50_UMAP.R	curated

@@ -103,8 +103,17 @@ cat0 <- function(...) cat(..., "\n", sep = "")
 
 find_by_name <- function(root, filename, max_n = 20) {
   if (!dir.exists(root)) return(character(0))
-  cmd <- sprintf("find %s -name %s 2>/dev/null", shQuote(root), shQuote(filename))
-  res <- tryCatch(system(cmd, intern = TRUE), error = function(e) character(0))
+  res <- tryCatch(
+    {
+      all_files <- list.files(
+      root,
+      recursive = TRUE,
+      full.names = TRUE
+      )
+      all_files[basename(all_files) == filename]
+    },
+    error = function(e) character(0)
+  )
   unique(head(res, max_n))
 }
 

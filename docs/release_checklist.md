@@ -2,13 +2,15 @@
 
 ## Blocking items
 
-- [ ] Recover raw-data import, threshold QC, and sample-wise scDblFinder scripts
-      from the server and place them in `scripts/00_raw_data_and_qc/`.
-- [ ] Record the exact feature, count, and mitochondrial thresholds and the
-      number of cells/nuclei removed at each QC step.
+- [x] Recover and curate raw-data import, threshold QC, and sample-wise
+      scDblFinder scripts in `scripts/00_raw_data_and_qc/`.
+- [x] Record exact feature, count, mitochondrial, and complexity thresholds,
+      plus verified pre/post-doublet counts. The raw-QC script writes
+      per-sample threshold-removal counts during rerun.
 - [ ] Run every curated script from a clean output directory using the final
       server configuration.
-- [ ] Run `Rscript environment/capture_session_info.R` on the server.
+- [ ] Run `Rscript environment/capture_session_info.R` in the complete final
+      server environment; a partial CFFF session record is included.
 - [ ] Create and commit the final `renv.lock` from that verified environment.
 - [ ] Recheck `docs/figure_script_map.tsv` if panel numbering changes during
       revision.
@@ -26,9 +28,9 @@
 
 - [ ] README, Methods, Data Availability, and Code Availability use the same
       sample labels, software versions, data identifiers, and analysis order.
-- [ ] Mouse-to-human mapping is ortholog based; no uppercase-only conversion
+- [x] Mouse-to-human mapping is ortholog based; no uppercase-only conversion
       remains in the public workflow.
-- [ ] Harmony is grouped by sample identity; APOE genotype is not a correction
+- [x] Harmony is grouped by sample identity; APOE genotype is not a correction
       variable.
-- [ ] The repository contains only the final scripts needed to reproduce the
+- [x] The repository contains only the final scripts needed to reproduce the
       reported results; exploratory scripts are retained outside the release.

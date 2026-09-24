@@ -13,7 +13,7 @@
 #   - use motifAnnotations_hgnc_v9 / motifAnnotations_mgi_v9
 #   - bypass SCENIC::geneFiltering compatibility issues
 #   - save cellInfo as RDS for SCENIC heatmap step
-#   - use doMC for AUCell / SCENIC multicore scoring
+#   - use an OS-aware parallel backend for AUCell / SCENIC scoring
 #   - keep EGR1/Egr1 in expression matrix when present
 # ============================================================
 
@@ -31,7 +31,6 @@ suppressPackageStartupMessages({
   library(RcisTarget)
   library(AUCell)
   library(GENIE3)
-  library(doMC)
 })
 
 source(file.path("R", "load_config.R"))
@@ -46,10 +45,27 @@ cat0 <- function(...) cat(..., "\n", sep = "")
 SEED <- 123
 set.seed(SEED)
 
-# Your machine has 32 cores. 24 is more stable than using all cores.
-N_CORES <- 30
+# Configure with A4OL_N_CORES in config/paths.R or the environment.
+N_CORES <- A4OL_N_CORES
 
-doMC::registerDoMC(cores = N_CORES)
+register_scenic_backend <- function(n_cores = N_CORES) {
+  if (.Platform$OS.type == "windows") {
+    if (!requireNamespace("doParallel", quietly = TRUE)) {
+      stop("Package 'doParallel' is required for parallel SCENIC on Windows.")
+    }
+    cl <- parallel::makeCluster(n_cores)
+    doParallel::registerDoParallel(cl)
+    return(cl)
+  }
+
+  if (!requireNamespace("doMC", quietly = TRUE)) {
+    stop("Package 'doMC' is required for parallel SCENIC on Linux/macOS.")
+  }
+  doMC::registerDoMC(cores = n_cores)
+  NULL
+}
+
+SCENIC_CLUSTER <- register_scenic_backend()
 
 # Formal but still stable settings.
 # If you want a faster pilot, use 1000 and 8000.
@@ -843,7 +859,7 @@ run_scenic_one_species <- function(label,
 
   cat0("\n========== ", label, ": runSCENIC_3_scoreCells ==========")
   score_ok <- tryCatch({
-    doMC::registerDoMC(cores = N_CORES)
+    if (is.null(SCENIC_CLUSTER)) register_scenic_backend(N_CORES)
     SCENIC::runSCENIC_3_scoreCells(
       scenicOptions,
       exprMat
@@ -1087,3 +1103,7 @@ cat0("  ", file.path(OUT_ROOT, "human/tables/human_all_regulon_AUC_A4_vs_Other_s
 cat0("  ", file.path(OUT_ROOT, "mouse/tables/mouse_all_regulon_AUC_A4_vs_Other_stats.csv"))
 cat0("  ", file.path(COMBINED_DIR, "human_mouse_shared_regulon_TFs_wide.csv"))
 cat0("  ", file.path(COMBINED_DIR, "human_mouse_EGR1_shared_regulon_summary.csv"))
+
+if (!is.null(SCENIC_CLUSTER)) {
+  parallel::stopCluster(SCENIC_CLUSTER)
+}

@@ -1,35 +1,42 @@
-package	source	role
-AnnotationDbi	Bioconductor	gene identifier mapping
-AUCell	Bioconductor	regulon activity scoring
-babelgene	CRAN	mouse-to-human ortholog mapping
-clusterProfiler	Bioconductor	functional enrichment
-cowplot	CRAN	plot composition
-data.table	CRAN	table processing
-doMC	CRAN	multicore backend for SCENIC on Linux
-dplyr	CRAN	data manipulation
-enrichplot	Bioconductor	enrichment visualization
-fgsea	Bioconductor	gene-set enrichment
-GENIE3	Bioconductor	SCENIC network inference
-ggplot2	CRAN	visualization
-ggrepel	CRAN	non-overlapping plot labels
-harmony	CRAN	sample-aware integration
-Matrix	CRAN	sparse matrices
-org.Hs.eg.db	Bioconductor	human gene annotation
-org.Mm.eg.db	Bioconductor	mouse gene annotation
-patchwork	CRAN	plot composition
-pheatmap	CRAN	heatmaps
-purrr	CRAN	functional iteration
-RColorBrewer	CRAN	color palettes
-RcisTarget	Bioconductor	SCENIC motif enrichment
-readr	CRAN	delimited-file input/output
-scales	CRAN	plot scales
-scDblFinder	Bioconductor	sample-wise doublet detection in the upstream QC workflow
-SCENIC	Bioconductor	regulon inference workflow
-Seurat	CRAN	single-cell analysis
-SeuratObject	CRAN	Seurat object infrastructure
-showtext	CRAN	font rendering
-stringr	CRAN	string processing
-sysfonts	CRAN	font registration
-tibble	CRAN	tables
-tidyr	CRAN	data reshaping
-UCell	Bioconductor	signature scoring
+package	source	role	tested_version	version_evidence
+AnnotationDbi	Bioconductor	gene identifier mapping	not captured	requires fresh CFFF session capture
+AUCell	Bioconductor	regulon activity scoring	not captured	requires fresh CFFF session capture
+babelgene	CRAN	mouse-to-human ortholog mapping	not captured	requires fresh CFFF session capture
+BiocParallel	Bioconductor	parallel backend for scDblFinder	not captured	requires fresh CFFF session capture
+clusterProfiler	Bioconductor	functional enrichment	not captured	requires fresh CFFF session capture
+cowplot	CRAN	plot composition	1.2.0	CFFF session record
+data.table	CRAN	table processing	1.18.4	CFFF session record
+doMC	CRAN	SCENIC parallel backend on Linux/macOS	not captured	requires fresh CFFF session capture
+doParallel	CRAN	SCENIC parallel backend on Windows	not captured	Windows compatibility dependency
+dplyr	CRAN	data manipulation	1.2.1	CFFF session record
+enrichplot	Bioconductor	enrichment visualization	not captured	requires fresh CFFF session capture
+fgsea	Bioconductor	gene-set enrichment	not captured	requires fresh CFFF session capture
+GENIE3	Bioconductor	SCENIC network inference	not captured	requires fresh CFFF session capture
+ggplot2	CRAN	visualization	4.0.3	CFFF session record
+ggrepel	CRAN	non-overlapping plot labels	0.9.8	CFFF session record
+harmony	CRAN	sample-identity integration	not captured	requires fresh CFFF session capture
+hdf5r	CRAN	10x HDF5 matrix input	not captured	requires fresh CFFF session capture
+lmerTest	CRAN	mixed-effects inference	not captured	requires fresh CFFF session capture
+Matrix	CRAN	sparse matrices	1.7-4	CFFF session record
+org.Hs.eg.db	Bioconductor	human gene annotation	not captured	requires fresh CFFF session capture
+org.Mm.eg.db	Bioconductor	mouse gene annotation	not captured	requires fresh CFFF session capture
+patchwork	CRAN	plot composition	1.3.2	CFFF session record
+pheatmap	CRAN	heatmaps	not captured	requires fresh CFFF session capture
+purrr	CRAN	functional iteration	1.2.2	CFFF session record
+RcisTarget	Bioconductor	SCENIC motif enrichment	not captured	requires fresh CFFF session capture
+RColorBrewer	CRAN	plot palettes	1.1-3	CFFF session record
+readr	CRAN	delimited-file input/output	not captured	requires fresh CFFF session capture
+remotes	CRAN	SCENIC installation from GitHub	not captured	installer dependency
+scales	CRAN	plot scales	1.4.0	CFFF session record
+scDblFinder	Bioconductor	sample-wise doublet detection	not captured	requires fresh CFFF session capture
+SCENIC	GitHub aertslab/SCENIC	regulon inference workflow	1.3.1	script compatibility note; confirm in fresh CFFF capture
+Seurat	CRAN	single-cell analysis	5.4.0	CFFF session record
+SeuratObject	CRAN	Seurat object infrastructure	5.3.0	CFFF session record
+showtext	CRAN	font rendering	not captured	requires fresh CFFF session capture
+SingleCellExperiment	Bioconductor	Seurat-to-SCE conversion for doublet QC	not captured	requires fresh CFFF session capture
+stringr	CRAN	string processing	1.6.0	CFFF session record
+SummarizedExperiment	Bioconductor	assay and metadata access for doublet QC	not captured	requires fresh CFFF session capture
+sysfonts	CRAN	font registration	not captured	requires fresh CFFF session capture
+tibble	CRAN	tables	3.3.1	CFFF session record
+tidyr	CRAN	data reshaping	1.3.2	CFFF session record
+UCell	Bioconductor	signature scoring	not captured	requires fresh CFFF session capture

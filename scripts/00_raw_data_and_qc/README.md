@@ -1,10 +1,29 @@
-# Raw-data processing and QC: scripts to recover before release
+# Raw-data processing and quality control
 
-The available local archive does not contain the upstream scripts that import
-raw single-cell/single-nucleus RNA-sequencing matrices, construct the initial
-Seurat object, apply feature/count/mitochondrial thresholds, or run scDblFinder.
-Those scripts must be copied from the analysis server into this directory before
-the repository is declared complete.
+The upstream workflow was reconstructed from the archived CFFF server scripts
+in `analysis-refine` and `Afigureoutput+`, then made portable by moving private
+paths into `config/paths.R`. Run from the repository root:
+
+```bash
+Rscript scripts/00_raw_data_and_qc/01_build_mouse_seurat_from_10x.R
+Rscript scripts/00_raw_data_and_qc/02_samplewise_scdblfinder.R
+```
+
+The first script reads Cell Ranger `filtered_feature_bc_matrix.h5` files,
+constructs one Seurat object per mouse, applies the archived thresholds, merges
+the retained cells, and runs PCA, sample-identity Harmony, clustering, and UMAP.
+APOE genotype is metadata only and is not a Harmony correction variable.
+
+The applied cell filters use strict inequalities:
+
+- 700 < detected features < 5,000;
+- 500 < RNA counts < 30,000;
+- mitochondrial fraction < 5%; and
+- log10(features)/log10(counts) > 0.75.
+
+`CreateSeuratObject` additionally uses `min.cells = 3` and
+`min.features = 300`. The script writes the thresholds and per-sample counts
+before and after threshold QC to machine-readable TSV files.
 
 The verified sample-wise scDblFinder summary is:
 
@@ -16,14 +35,8 @@ The verified sample-wise scDblFinder summary is:
 Per-sample counts are recorded in
 `metadata/mouse_sample_key_and_doublet_qc.tsv`.
 
-The recovered scripts should report, without exposing private filesystem paths:
-
-1. raw input format and reference genome/annotation;
-2. minimum and maximum detected-feature thresholds;
-3. minimum and maximum count thresholds;
-4. mitochondrial-read threshold;
-5. whether thresholds differed by sample;
-6. the exact scDblFinder call and package version;
-7. cells/nuclei removed at each QC step; and
-8. the filename of the 108,166-cell singlet-only output object.
-
+`02_samplewise_scdblfinder.R` runs `scDblFinder` with `samples =
+"doublet_qc_sample"`, `clusters = TRUE`, `dbr = NULL`, and
+`multiSampleMode = "split"`. Linux uses `MulticoreParam`; Windows uses the
+portable serial backend. The singlet-only output is also saved as
+`seurat_clustered.rds`, which is the input to major-cell-type annotation.
